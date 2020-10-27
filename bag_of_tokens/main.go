@@ -33,6 +33,8 @@ func bagOfTokensScore(tokens []int, P int) int {
 		score +=1
 		i++
 
+		mak
+
 
 	}
 
