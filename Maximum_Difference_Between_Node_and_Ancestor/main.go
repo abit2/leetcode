@@ -13,7 +13,9 @@ func maxAncestorDiff(root *TreeNode) int {
 }
 
 func helper(root *TreeNode, s, l int) int {
-	if root == nil {return l-s}
+	if root == nil {
+		return l - s
+	}
 	s = min(root.Val, s)
 	l = max(root.Val, l)
 
@@ -21,11 +23,15 @@ func helper(root *TreeNode, s, l int) int {
 }
 
 func max(i, j int) int {
-	if i < j {return j}
+	if i < j {
+		return j
+	}
 	return i
 }
 
 func min(i, j int) int {
-	if i > j {return j}
+	if i > j {
+		return j
+	}
 	return i
 }

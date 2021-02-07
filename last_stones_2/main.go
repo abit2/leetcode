@@ -8,22 +8,22 @@ func lastStoneWeightII(stones []int) int {
 	for _, v := range stones {
 		sum += v
 	}
-	for i:=0; i<=n; i++ {
+	for i := 0; i <= n; i++ {
 		dp[i] = make([]bool, sum+1)
 	}
 
 	// fmt.Println(dp)
-	for i:=0; i<=n; i++ {
+	for i := 0; i <= n; i++ {
 		// fmt.Println(i)
 		dp[i][0] = true
 	}
 
-	for j:=1; j<=sum; j++ {
+	for j := 1; j <= sum; j++ {
 		dp[0][j] = false
 	}
 
-	for i:=1; i<=n; i++ {
-		for j:=1; j<=sum; j++ {
+	for i := 1; i <= n; i++ {
+		for j := 1; j <= sum; j++ {
 			dp[i][j] = dp[i-1][j]
 			if stones[i-1] <= j {
 				dp[i][j] = dp[i][j] || dp[i-1][j-stones[i-1]]
@@ -34,7 +34,7 @@ func lastStoneWeightII(stones []int) int {
 	// fmt.Println("sum ", sum, " dp[n] ", dp)
 	var val int
 
-	for i:=sum/2; i>=0; i-- {
+	for i := sum / 2; i >= 0; i-- {
 		// fmt.Println(dp[len(dp)-1][i])
 		if dp[n][i] {
 			val = i
@@ -42,6 +42,5 @@ func lastStoneWeightII(stones []int) int {
 		}
 	}
 
-	return sum-2*val
+	return sum - 2*val
 }
-

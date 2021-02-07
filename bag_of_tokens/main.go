@@ -25,16 +25,15 @@ func bagOfTokensScore(tokens []int, P int) int {
 			j--
 			continue
 		}
-		if P < tokens[i] && j-i < 2{
+		if P < tokens[i] && j-i < 2 {
 			break
 		}
 
 		P -= tokens[i]
-		score +=1
+		score += 1
 		i++
 
 		mak
-
 
 	}
 

@@ -43,7 +43,9 @@ func bfs(node int, ed map[int]map[int]bool, visited []int) []int {
 
 	visited[node] = 1
 	for n, v := range ed[node] {
-		if v != true {continue}
+		if v != true {
+			continue
+		}
 		if visited[n] != 1 {
 			q = append(q, n)
 		}
@@ -63,11 +65,15 @@ func bfs(node int, ed map[int]map[int]bool, visited []int) []int {
 }
 
 func maxi(i, j []int) []int {
-	if len(i)>len(j) {return i}
+	if len(i) > len(j) {
+		return i
+	}
 	return j
 }
 
 func mini(i, j int) int {
-	if i<j {return i}
+	if i < j {
+		return i
+	}
 	return j
 }

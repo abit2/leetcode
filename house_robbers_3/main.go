@@ -1,9 +1,9 @@
 package main
 
 type TreeNode struct {
-     Val int
-     Left *TreeNode
-     Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func rob(root *TreeNode) int {
@@ -41,6 +41,8 @@ func helper(root *TreeNode, parentRobbed bool, robbed, notRobbed map[*TreeNode]i
 }
 
 func max(i, j int) int {
-	if i > j {return i}
+	if i > j {
+		return i
+	}
 	return j
 }

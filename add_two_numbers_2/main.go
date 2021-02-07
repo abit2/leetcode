@@ -8,7 +8,7 @@ package main
  * }
  */
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	var st1,st2 stack
+	var st1, st2 stack
 	cl1, cl2 := l1, l2
 	for cl1 != nil {
 		st1.push(cl1.Val)
@@ -25,8 +25,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	carry := 0
 	for !st1.size() && !st2.size() {
 		v1, v2 := st1.pop(), st2.pop()
-		sum := (v1+v2+carry)%10
-		carry = (v1+v2+carry)/10
+		sum := (v1 + v2 + carry) % 10
+		carry = (v1 + v2 + carry) / 10
 
 		tmp := &ListNode{
 			Val: sum,
@@ -38,8 +38,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	for !st1.size() {
 		v1 := st1.pop()
-		sum := (v1+carry)%10
-		carry = (v1+carry)/10
+		sum := (v1 + carry) % 10
+		carry = (v1 + carry) / 10
 
 		tmp := &ListNode{
 			Val: sum,
@@ -51,8 +51,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	for !st2.size() {
 		v1 := st2.pop()
-		sum := (v1+carry)%10
-		carry = (v1+carry)/10
+		sum := (v1 + carry) % 10
+		carry = (v1 + carry) / 10
 
 		tmp := &ListNode{
 			Val: sum,
@@ -63,7 +63,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	if carry != 0 {
-		sum := (carry)%10
+		sum := (carry) % 10
 
 		tmp := &ListNode{
 			Val: sum,
@@ -91,6 +91,8 @@ func (s *stack) push(val int) {
 }
 
 func (s *stack) size() bool {
-	if len(s.vals) == 0 {return true}
+	if len(s.vals) == 0 {
+		return true
+	}
 	return false
 }

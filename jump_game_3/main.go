@@ -26,7 +26,7 @@ func canReach(arr []int, start int) bool {
 				q = append(q, index+arr[index])
 			}
 
-			if index-arr[index] >=0 && visited[index-arr[index]] == 0 {
+			if index-arr[index] >= 0 && visited[index-arr[index]] == 0 {
 				q = append(q, index-arr[index])
 			}
 		}

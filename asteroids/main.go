@@ -45,21 +45,21 @@ func asteroidCollision(asteroids []int) []int {
 	return res
 }
 
-func last(arr []int) int{
+func last(arr []int) int {
 	if len(arr) == 0 {
 		return 0
 	}
 	return arr[len(arr)-1]
 }
 
-func pop(arr []int) []int{
+func pop(arr []int) []int {
 	if len(arr) == 0 {
 		return []int{}
 	}
 	return arr[:len(arr)-1]
 }
 
-func magnitude(v int) int{
+func magnitude(v int) int {
 	if v < 0 {
 		v = v * -1
 	}

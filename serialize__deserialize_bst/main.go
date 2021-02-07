@@ -10,9 +10,9 @@ package main
  */
 
 import (
-	"strings"
-	"strconv"
 	"math"
+	"strconv"
+	"strings"
 )
 
 type Codec struct {
@@ -66,7 +66,6 @@ func (this *Codec) deserialize(data string) *TreeNode {
 	index := 0
 	return this.stringToTree(math.MaxInt64, math.MinInt64, &index)
 }
-
 
 /**
  * Your Codec object will be instantiated and called as such:

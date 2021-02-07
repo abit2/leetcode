@@ -1,4 +1,5 @@
 package main
+
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -16,7 +17,7 @@ func getDecimalValue(head *ListNode) int {
 	ans := 0
 	for i, v := range s {
 		if v == 1 {
-			ans += (1<<i)
+			ans += (1 << i)
 		}
 	}
 	return ans

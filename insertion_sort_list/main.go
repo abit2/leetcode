@@ -25,4 +25,3 @@ func insertionSortList(head *ListNode) *ListNode {
 	}
 	return newHead.Next
 }
-

@@ -15,7 +15,7 @@ func cloneGraph(node *Node) *Node {
 	visited := make([]int, 100)
 	nodes := make([]*Node, 100)
 
-	for i:=1; i<=100; i++ {
+	for i := 1; i <= 100; i++ {
 		nodes[i-1] = &Node{
 			Val: i,
 		}

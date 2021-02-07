@@ -14,9 +14,9 @@ func minDominoRotations(A []int, B []int) int {
 	for i, _ := range storeA {
 		if len(store[i]) == len(A) {
 			if len(storeA[i]) < len(storeB[i]) {
-				return len(storeA[i])-(len(storeA[i])+len(storeB[i])-len(A))
+				return len(storeA[i]) - (len(storeA[i]) + len(storeB[i]) - len(A))
 			} else {
-				return len(storeB[i])-(len(storeA[i])+len(storeB[i])-len(A))
+				return len(storeB[i]) - (len(storeA[i]) + len(storeB[i]) - len(A))
 			}
 		}
 	}

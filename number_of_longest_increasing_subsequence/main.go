@@ -9,8 +9,8 @@ func findNumberOfLIS(nums []int) int {
 		cnt[i] = 1
 	}
 
-	for i:=1; i<len(nums); i++ {
-		for j := 0; j<i; j++ {
+	for i := 1; i < len(nums); i++ {
+		for j := 0; j < i; j++ {
 			if nums[j] < nums[i] {
 				if dp[i] <= dp[j] {
 					dp[i] = dp[j] + 1
@@ -25,12 +25,12 @@ func findNumberOfLIS(nums []int) int {
 	}
 
 	maLen := 0
-	for i:=0; i<len(dp); i++ {
+	for i := 0; i < len(dp); i++ {
 		maLen = max(maLen, dp[i])
 	}
 
 	count := 0
-	for i:=0; i<len(dp); i++ {
+	for i := 0; i < len(dp); i++ {
 		if dp[i] == maLen {
 			count += cnt[i]
 		}
@@ -40,6 +40,8 @@ func findNumberOfLIS(nums []int) int {
 }
 
 func max(i, j int) int {
-	if i > j {return i}
+	if i > j {
+		return i
+	}
 	return j
 }

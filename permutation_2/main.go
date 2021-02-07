@@ -4,7 +4,9 @@ func permuteUnique(nums []int) [][]int {
 	if len(nums) == 1 {
 		return [][]int{nums}
 	} else if len(nums) == 2 {
-		if nums[0] == nums[1] { return [][]int{nums}}
+		if nums[0] == nums[1] {
+			return [][]int{nums}
+		}
 		return [][]int{nums, []int{nums[1], nums[0]}}
 	}
 

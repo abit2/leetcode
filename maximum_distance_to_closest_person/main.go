@@ -26,8 +26,7 @@ func maxDistToClosest(seats []int) int {
 		left[i] = left[i-1] + 1
 	}
 
-
-	for i:=len(seats)-1; i>=0; i-- {
+	for i := len(seats) - 1; i >= 0; i-- {
 		if seats[i] == 1 {
 			right[i] = 0
 			continue
@@ -41,13 +40,13 @@ func maxDistToClosest(seats []int) int {
 			continue
 		}
 
-		right[i] = right[i+1]+1
+		right[i] = right[i+1] + 1
 	}
 	// fmt.Println(left)
 	// fmt.Println(right)
 
 	resp := -1
-	for i:=0; i<len(seats); i++ {
+	for i := 0; i < len(seats); i++ {
 		rr := mini(left[i], right[i])
 		resp = maxo(rr, resp)
 	}

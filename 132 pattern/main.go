@@ -35,7 +35,7 @@ func find132pattern(nums []int) bool {
 }
 
 func binarysearch(nums []int, smaller []int, index int, v2 int) bool {
-	sort.Slice(nums, func(ii, jj int) bool{
+	sort.Slice(nums, func(ii, jj int) bool {
 		return nums[ii] < nums[jj]
 	})
 
@@ -50,14 +50,24 @@ func binarysearch(nums []int, smaller []int, index int, v2 int) bool {
 		}
 
 		if v1 >= nums[middle] {
-			left = middle+1
+			left = middle + 1
 			continue
 		}
 
 		if v2 <= nums[middle] {
-			right = middle-1
+			right = middle - 1
 			continue
 		}
 	}
 	return false
 }
+[10,5,13,4,8,4,5,11,14,9,16,10,20,8]
+8
+[7,2,5,10,8]
+2
+[1,4,4]
+3
+[1,2,3,4,5]
+2
+[2,16,14,15]
+2

@@ -12,7 +12,7 @@ func numberOfSubstrings(s string) int {
 	count := 0
 	for indexA < len(store[0]) && indexB < len(store[1]) && indexC < len(store[2]) {
 		index, mm := maximini(store, indexA, indexB, indexC)
-		count += len(s)-mm
+		count += len(s) - mm
 		// fmt.Println("index ", mm, " count ", count, " char ", s[mm]=='c')
 
 		switch s[index] {
@@ -28,8 +28,8 @@ func numberOfSubstrings(s string) int {
 }
 
 func maximini(st [][]int, a, b, c int) (int, int) {
-	minimum := 1<<63-1
-	maximum := -1<<63
+	minimum := 1<<63 - 1
+	maximum := -1 << 63
 	minimum = mini(st[0][a], minimum)
 	minimum = mini(st[1][b], minimum)
 	minimum = mini(st[2][c], minimum)
@@ -41,11 +41,15 @@ func maximini(st [][]int, a, b, c int) (int, int) {
 }
 
 func mini(i, j int) int {
-	if i<j {return i}
+	if i < j {
+		return i
+	}
 	return j
 }
 
 func maxi(i, j int) int {
-	if i<j {return j}
+	if i < j {
+		return j
+	}
 	return i
 }
